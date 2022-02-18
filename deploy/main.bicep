@@ -6,7 +6,7 @@ param appServiceAppName string = 'toylaunch${uniqueString(resourceGroup().id)}'
   'nonprod'
   'prod'
 ])
-param environmentType string
+param environmentType string = 'nonprod'
 
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
 
